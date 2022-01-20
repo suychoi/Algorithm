@@ -41,14 +41,18 @@
 #     print("4")
 
 H, M = input().split()
-H = int(H)
-M = int(M)
-if M >= 45:
-    print(H + " " + (M-45))
-elif M < 45 and H == 0:
-    print(H+23 + " " + (M + 15))
-elif M < 45:
-    print((H-1) + " " + (M + 15))
+if int(M) >= 45:
+    print(H,str(int(M)-45))
+elif int(M) < 45 and int(H) == 0:
+    print(str(int(H)+23),str(int(M)+15))
+elif int(M) < 45:
+    print(str(int(H)-1),str(int(M)+15))
+
+a, b = map(int, input().split())
+print((a - (b < 45)) % 24, (b - 45) % 60)
+
+
+
 
 
 
