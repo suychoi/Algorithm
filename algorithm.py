@@ -40,18 +40,20 @@
 # elif a > 0 and b < 0:
 #     print("4")
 
-H, M = input().split()
-if int(M) >= 45:
-    print(H,str(int(M)-45))
-elif int(M) < 45 and int(H) == 0:
-    print(str(int(H)+23),str(int(M)+15))
-elif int(M) < 45:
-    print(str(int(H)-1),str(int(M)+15))
+# H, M = input().split()
+# if int(M) >= 45:
+#     print(H,str(int(M)-45))
+# elif int(M) < 45 and int(H) == 0:
+#     print(str(int(H)+23),str(int(M)+15))
+# elif int(M) < 45:
+#     print(str(int(H)-1),str(int(M)+15))
+#
+# a, b = map(int, input().split())
+# print((a - (b < 45)) % 24, (b - 45) % 60)
 
-a, b = map(int, input().split())
-print((a - (b < 45)) % 24, (b - 45) % 60)
-
-
+n = int(input())
+for x in range(9):
+    print( str(n) + " * " + str((x+1)) + " = " + str(int(n * (x+1))))
 
 
 
