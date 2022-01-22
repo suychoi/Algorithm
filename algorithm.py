@@ -51,10 +51,14 @@
 # a, b = map(int, input().split())
 # print((a - (b < 45)) % 24, (b - 45) % 60)
 
-n = int(input())
-for x in range(9):
-    print( str(n) + " * " + str((x+1)) + " = " + str(int(n * (x+1))))
+# n = int(input())
+# for x in range(9):
+#     print( str(n) + " * " + str((x+1)) + " = " + str(int(n * (x+1))))
 
+n = int(input())
+for x in range(n):
+    a, b = input().split()
+    print(int(a) + int(b))
 
 
 
