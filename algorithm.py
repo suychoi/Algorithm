@@ -55,11 +55,16 @@
 # for x in range(9):
 #     print( str(n) + " * " + str((x+1)) + " = " + str(int(n * (x+1))))
 
-n = int(input())
-for x in range(n):
-    a, b = input().split()
-    print(int(a) + int(b))
+# n = int(input())
+# for x in range(n):
+#     a, b = input().split()
+#     print(int(a) + int(b))
 
+n = int(input())
+y = 0
+for x in range(n):
+    y = y + (x+1)
+print(y)
 
 
 
