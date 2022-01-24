@@ -1,3 +1,5 @@
+import sys
+
 # a, b = input().split()
 # if int(a) > int(b):
 #     print(">")
@@ -60,15 +62,28 @@
 #     a, b = input().split()
 #     print(int(a) + int(b))
 
-n = int(input())
-y = 0
-for x in range(n):
-    y = y + (x+1)
-print(y)
+# n = int(input())
+# y = 0
+# for x in range(n):
+#     y = y + (x+1)
+# print(y)
 
 
+#
+# n = int(input())
+# for x in range(n):
+#     a, b = map(int, sys.stdin.readline().split())   #반복문으로 여러 번 입력 받을 때
+#     print(a + b)
 
+# n = int(input())
+# for x in range(n):
+#     print(n-x)
 
+import sys
+T = int(input())
+for x in range(T):
+    a, b = map(int, sys.stdin.readline().split())
+    print("Case #" + str(int(x)+1)+ ": " + str(a) + " + " + str(b) + " = " + str(a + b))
 
 
 
