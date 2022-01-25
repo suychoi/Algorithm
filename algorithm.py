@@ -128,10 +128,19 @@
 #         N = M
                                                                 ##List
 
-N = int(input())
-A = [0 for i in range(N)]
-A = list(map(int, input().split()))
-print(str(min(A)) + " " + str(max(A)))
+# N = int(input())
+# A = [0 for i in range(N)]
+# A = list(map(int, input().split()))
+# print(str(min(A)) + " " + str(max(A)))
+
+                                                                # 2526 번 문제, max 를 ASCII 로 읽을 수 있다(조심)
+import sys
+A = [0 for i in range(9)]
+for x in range(9):
+    A[x] = int(sys.stdin.readline().strip())
+
+print(max(A))
+print(A.index(max(A))+1)
 
 
 
