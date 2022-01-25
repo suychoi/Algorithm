@@ -126,13 +126,12 @@
 #         break
 #     else:
 #         N = M
+                                                                ##List
 
-
-
-
-
-
-
+N = int(input())
+A = [0 for i in range(N)]
+A = list(map(int, input().split()))
+print(str(min(A)) + " " + str(max(A)))
 
 
 
