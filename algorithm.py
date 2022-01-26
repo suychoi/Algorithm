@@ -146,8 +146,25 @@
 # Num = [0 for i in range(3)]
 # for x in range(3):
 #     Num[x] = int(sys.stdin.readline().strip())
-# a = SUM.count('0')
+# a = SUM.count('0')                                    #요소 count
 # print(a)
+
+# import sys
+# Num = set()
+# for x in range(10):
+#     A = int(sys.stdin.readline().strip())
+#     Num.add(A % 42)
+# print(len(Num))                                      # 요소 수
+
+# import sys
+# N = int(input())
+# Num = list(map(int, sys.stdin.readline().split()))          #여러번 입력
+# #a = [int(x) for x in input().strip.split()]
+# # print(Num.pop(Num.index(max(Num))))
+# M = max(Num)
+# for x in range(N):
+#     Num[x] = Num[x] / M * 100
+# print(sum(Num) / N)                                     # 요소 총 합
 
 
 
