@@ -166,6 +166,53 @@
 #     Num[x] = Num[x] / M * 100
 # print(sum(Num) / N)                                     # 요소 총 합
 
+# import sys
+# N = int(input())
+# for x in range(N):
+#     Q = sys.stdin.readline().strip()
+#     R = list(Q)                                             # 문자열을 List로
+#     Sum = 0
+#     S = 0
+#     for y in range(len(R)):
+#         if R[y] == 'O':
+#             S = S + 1
+#             Sum = Sum + S
+#         elif R[y] == 'X':
+#             S = 0
+#     print(Sum)
+
+import sys
+C = int(input())
+for x in range(C):
+    Q = list(map(int, sys.stdin.readline().split()))
+    AVG = sum(Q[1:]) / Q[0]                                  #Index Slicing
+    Num = 0
+    for y in range(len(Q)-1):
+        if Q[y+1] > AVG:
+            Num = Num + 1
+    Z = round(Num/Q[0]*100, 3)
+    print(f'{Z:.3f}' + "%")                                 #소수점 3자리까지 출력 하기( format )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
