@@ -70,7 +70,7 @@
 #
 # n = int(input())
 # for x in range(n):
-#     a, b = map(int, sys.stdin.readline().split())   #반복문으로 여러 번 입력 받을 때
+#     a, b = map(int, sys.stdin.readline().split())       #반복문으로 여러 번 입력 받을 때
 #     print(a + b)
 #
 # n = int(input())
@@ -192,9 +192,28 @@
 #             Num = Num + 1
 #     Z = round(Num/Q[0]*100, 3)
 #     print(f'{Z:.3f}' + "%")                                 #소수점 3자리까지 출력 하기( format )
+#
 
-def solve(a):
-    return sum(a)
+N = 10000
+A = list(range(1, N))
+
+def solve(x):
+    y = x
+    for z in range(len(str(x))):                                #자리수 계산
+        y = y + int(str(x)[z])
+    if y in A:
+        A.remove(y)
+    return A
+
+for x in range(N):
+    solve(x+1)
+
+for i in range(len(A)):
+    print(A[i])
+
+
+
+
 
 
 
