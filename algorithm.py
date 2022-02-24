@@ -194,22 +194,26 @@
 #     print(f'{Z:.3f}' + "%")                                 #소수점 3자리까지 출력 하기( format )
 #
 
-N = 10000
-A = list(range(1, N))
+# N = 10000
+# A = list(range(1, N))
+#
+# def solve(x):
+#     y = x
+#     for z in range(len(str(x))):                                #자리수 계산
+#         y = y + int(str(x)[z])
+#     if y in A:
+#         A.remove(y)
+#     return A
+#
+# for x in range(N):
+#     solve(x+1)
+#
+# for i in range(len(A)):
+#     print(A[i])
 
-def solve(x):
-    y = x
-    for z in range(len(str(x))):                                #자리수 계산
-        y = y + int(str(x)[z])
-    if y in A:
-        A.remove(y)
-    return A
+A = ord(input())
+print(A)
 
-for x in range(N):
-    solve(x+1)
-
-for i in range(len(A)):
-    print(A[i])
 
 
 
