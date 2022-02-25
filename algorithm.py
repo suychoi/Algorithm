@@ -210,9 +210,27 @@
 #
 # for i in range(len(A)):
 #     print(A[i])
+# ------------------------------------------------------------------------------------ 1065번
+num = int(input()) # 1001
 
-A = ord(input())
-print(A)
+def hansu(num):
+    hansu_count = 0
+    for z in range(1, num+1):
+        num_list = list(map(int, str(z)))
+        if z < 100:
+            hansu_count = hansu_count + 1
+        elif num_list[0] - num_list[1] == num_list[1] - num_list[2]:
+            hansu_count = hansu_count + 1
+    print(hansu_count)
+
+hansu(num)
+
+
+
+# ------------------------------------------------------------------------------------
+#
+# A = ord(input())
+# print(A)
 
 
 
