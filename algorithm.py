@@ -211,27 +211,38 @@
 # for i in range(len(A)):
 #     print(A[i])
 # ------------------------------------------------------------------------------------ 1065번
-num = int(input()) # 1001
+# num = int(input()) # 1001
+#
+# def hansu(num):
+#     hansu_count = 0
+#     for z in range(1, num+1):
+#         num_list = list(map(int, str(z)))
+#         if z < 100:
+#             hansu_count = hansu_count + 1
+#         elif num_list[0] - num_list[1] == num_list[1] - num_list[2]:
+#             hansu_count = hansu_count + 1
+#     print(hansu_count)
+#
+# hansu(num)
 
-def hansu(num):
-    hansu_count = 0
-    for z in range(1, num+1):
-        num_list = list(map(int, str(z)))
-        if z < 100:
-            hansu_count = hansu_count + 1
-        elif num_list[0] - num_list[1] == num_list[1] - num_list[2]:
-            hansu_count = hansu_count + 1
-    print(hansu_count)
-
-hansu(num)
 
 
-
-# ------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------문자열
 #
 # A = ord(input())
 # print(A)
 
+# ------------------------------------------------------------------------------------ 11720 번
+# N = input()
+# num = list(input())
+#
+# def sume(num):
+#     num_sum = 0
+#     for i in range(len(num)):
+#         num_sum += int(num[i])
+#     print(num_sum)
+#
+# sume(num)
 
 
 
@@ -259,6 +270,14 @@ hansu(num)
 
 
 
+
+# ------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------
 
 
 
