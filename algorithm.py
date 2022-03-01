@@ -232,59 +232,6 @@
 # A = ord(input())
 # print(A)
 
-# ------------------------------------------------------------------------------------ 11720 번
-# N = input()
-# num = list(input())
-#
-# def sume(num):
-#     num_sum = 0
-#     for i in range(len(num)):
-#         num_sum += int(num[i])
-#     print(num_sum)
-#
-# sume(num)
-# ------------------------------------------------------------------------------------ 10809 번
-#
-# S = input()
-# A = list(map(str, S.lower()))
-# result = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-# # baekjoon
-#
-# for i in range(0, 26):
-#     for x in range (len(A)):
-#         if result[i] == -1 and chr(i+97)==A[x]:                           아스키 코드(숫자->문자) 변환
-#             result[i] = x
-# for z in range(len(result)):
-#     print(str(result[z]), end=" ")                                        결과값 일자로 출력
-
-
-
-# ------------------------------------------------------------------------------------ 2675 번
-T = int(input())
-P = []
-Case = []
-for i in range(T):
-     R, S = input().split()
-     P.append([R, S])
-     if i == T-1:
-         for y in range (len(P)):
-             B = list(P[y][1])                  #ABC
-             for z in range(len(B)):
-                 ZZ = B[z] * int(P[y][0])
-                 Case.append([y][ZZ])
-
-# for i in range(len(Case)):
-print(Case)
-# T = input()
-# print((T * 10))
-#
-
-
-
-
-# N, X = input().split()
-# A = list(map(int, input().split()))
-
 
 # ------------------------------------------------------------------------------------
 
