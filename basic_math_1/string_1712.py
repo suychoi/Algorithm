@@ -1,18 +1,25 @@
 # ------------------------------------------------------------------------------------ 1712 번
+#A  고정비용
+#B  가변비용
+#C  노트북 가격
 
-N = int(input())
-words = []
-for i in range(N):
-    X = str(input())
-    words.append(X.lower())
 
-for y in range(N):
-    w = words[y]
-    for z in range(len(w)-1):
-        if w[z] == w[z+1]:
-            pass
-        elif w[z] in w[z+1:]:
-            N -= 1
-            break
+A, B, C = map(int, input().split())
+Z = 0
 
-print(N)
+if C - B != 0:
+    Z = A//(C-B)
+
+for i in range (Z+1, Z+2):
+    if 0 >= C - B :
+        print(-1)
+        break
+    if A // i < C - B:
+        print(i)
+        break
+
+
+
+# A + (i * B) < (i * C):    // 는 나누고 정수 부분만 구함
+# % 나누기 연산 후 몫이 아닌 나머지를 구함
+
