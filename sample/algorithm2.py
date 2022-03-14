@@ -6,8 +6,8 @@ for i in range(len(N)):
     else:
         if int(N[i]) == 0:
             continue
-        elif int(N[i]) == 1:
-            result += 1
+        elif int(N[i]) == 1 or result == 1:
+            result += int(N[i])
         else:
             result *= int(N[i])
 print(result)

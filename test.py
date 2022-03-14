@@ -1,3 +1,4 @@
-
-X = [True] * 10
-print(X)
+result = [1, 2, 3]
+print(result)
+result.clear()
+print(result)
