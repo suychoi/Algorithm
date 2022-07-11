@@ -11,40 +11,25 @@
 
 """
 
-from operator import  itemgetter
 import sys
 N = int(sys.stdin.readline())
-end_time = 0
 time =[]
 
 for i in range(N):
-    reservation = list(map(int, sys.stdin.readline().split()))
-    time.append(reservation)
-    if end_time < reservation[1]:
-        end_time = reservation[1]
+    time.append(list(map(int, sys.stdin.readline().split())))
 
-# 끝나는 시간 순 정렬
-time.sort(key=itemgetter(1))
+time.sort(key=lambda  x: (x[1], x[0]))
 
-# start_time = end_time
-#
-# for n in range(N):
-#     if start_time > time[n][0]:
-#         start_time = time[n][0]
-
-# time_ck = [True] * (end_time - start_time)
-time_ck = [True] * end_time
-
-cnt = 0
+b_end_time, cnt = 0, 0
 
 for i in time:
-    if all(time_ck[time[i][0]:time[i][1]+1]):
-        time_ck[time[i][0]:time[i][1]] = [False] * (time[i][1]-time[i][0])
+    s_time = i[0]
+    e_time = i[1]
+
+    if s_time >= b_end_time:
+        b_end_time = e_time
         cnt += 1
 print(cnt)
-
-for z in time:
-    print(z)
 
 
 
