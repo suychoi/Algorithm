@@ -9,16 +9,33 @@
 """
 # 문자와 기호로 분류 - 가 붙을때 다음 - 가 나오기 전까지 괄호로 묶는다.
 
-formula = input().split('-')
+# 2회차
+f = input().split('-')
+f_list = []
+
+for n in f:
+    y = list(map(int, n.split('+')))
+    f_list.append(sum(y))
 
 result = 0
-for num in range(len(formula)):
-    f1 = formula[num].lstrip('0')
-    f1 = f1.strip()
-    if num == 0:
-        result = eval(f1)
-    elif formula[num]:
-        result -= eval(f1)
-
+for y in range(len(f_list)):
+    if y == 0:
+        result = f_list[y]
+    else:
+        result -= f_list[y]
 print(result)
+###############################################################################
+# 1회차 ( eval 활용 )
+# formula = input().split('-')
+#
+# result = 0
+# for num in range(len(formula)):
+#     f1 = formula[num].lstrip('0')
+#     f1 = f1.strip()
+#     if num == 0:
+#         result = eval(f1)
+#     elif formula[num]:
+#         result -= eval(f1)
+#
+# print(result)
 
