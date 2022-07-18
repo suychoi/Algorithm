@@ -5,17 +5,25 @@
 
 타로가 JOI잡화점에서 물건을 사고 카운터에서 1000엔 지폐를 한장 냈을 때, 받을 잔돈에 포함된 잔돈의 개수를 구하는 프로그램을 작성하시오.
 
+30 분정도..
+
 '''
 import sys
 
 pay = 1000 - int(sys.stdin.readline())
 
-change = [500, 100, 50, 5, 1]
+change = [500, 100, 50, 10, 5, 1]
 cnt = 0
+
 for m in change:
-    pay // m = z
-    if pay // m >= 1:
+    if pay % m == 0:
         cnt += pay // m
+        pay -= pay
+    elif pay // m >= 1:
+            cnt += pay // m
+            pay -= (pay // m) * m
+
+print(cnt)
 
 
 
