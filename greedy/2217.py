@@ -16,16 +16,36 @@ N(1 ≤ N ≤ 100,000)개의 로프가 있다.
 이 로프들을 이용하여 들어올릴 수 있는 물체의 최대 중량을 구해내는 프로그램을 작성하시오.
 
 모든 로프를 사용해야 할 필요는 없으며, 임의로 몇 개의 로프를 골라서 사용해도 된다.
-w/k 무게 / 개수
-개수가 적고 무게가 높은 순서로 나눠서 최대값
+w/k
+
+최대 무게 = 한줄당무게 * 개수
+20 = 20/2 * 2
+? = 15/1 * 1
+
 '''
+
 import sys
 
 N = int(sys.stdin.readline())
 lope = []
+result = []
+w = 0
 
 for n in range(N):
     l = int(sys.stdin.readline())
     lope.append(l)
 
-print(lope)
+lope.sort(reverse=True)
+
+for i in range(N):
+    w += lope[i] / (i+1)    # 34
+    h = lope[i]             # 33
+    if w > h:
+        result.append(int(h*(i+1)))
+    elif w <= h:
+        result.append(int(w))
+
+print(max(result))
+
+
+
