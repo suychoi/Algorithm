@@ -13,24 +13,27 @@ N개의 단어가 주어졌을 때, 그 수의 합을 최대로 만드는 프로
 
 import sys
 N = int(sys.stdin.readline())
-s = []
 
 alp = {'A':0, 'B':0, 'C':0, 'D':0, 'E':0, 'F':0, 'G':0, 'H':0, 'I':0, 'J':0, 'K':0, 'L':0, 'M':0, 'N':0, 'O':0, 'P':0, 'Q':0, 'R':0, 'S':0, 'T':0, 'U':0, 'V':0, 'W':0, 'X':0, 'Y':0, 'Z':0}
-
+alp_list = []
+result = 0
+s = []
 
 for i in range(N):
     s.append(sys.stdin.readline().strip())
 
-compare = ''
+for a in s:
+    for i in range(len(a)):
+        num = 10 ** (len(a) - i -1)
+        alp[a[i]] += num
 
-for i in s:
-    compare += i
+for v in alp.values():
+    if v > 0:
+        alp_list.append(v)
 
-for i in set(compare):  # 알파벳
-    for z in s:         # 단어
-        if i in z:
-            len(z) - z.index(i)
+sorted_list = sorted(alp_list, reverse=True)
+for i in range(len(sorted_list)):
+    result += sorted_list[i] * (9-i)
 
+print(result)
 
-
-print(s)
