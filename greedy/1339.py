@@ -24,8 +24,8 @@ for i in range(N):
 
 for a in s:
     for i in range(len(a)):
-        num = 10 ** (len(a) - i -1)
-        alp[a[i]] += num
+        num = 10 ** (len(a) - i -1) # 10의 제곱
+        alp[a[i]] += num        # A:1010
 
 for v in alp.values():
     if v > 0:
